@@ -32,5 +32,6 @@ module.exports = {
            iconURL: message.author.avatarURL({dynamic: true})
         });
         message.reply({embeds: [embed]});
+        console.log(`${new Date().toLocaleString()} - ${message.author}} używa komendy avatar na użytkowniku ${user}`)
     }
 }

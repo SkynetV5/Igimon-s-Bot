@@ -12,11 +12,15 @@ module.exports = {
         {
             user = mention.user;
             message.reply(`Hey ${user}`);
+            console.log(`${new Date().toLocaleString()} - ${message.author}} używa komendy poke na uzytkownika ${user}`)
         }
         else 
         {
+            console.log(`${new Date().toLocaleString()} - ${message.author}} używa komendy poke`)
             return;
+            
         }
+        
         
     }
 }

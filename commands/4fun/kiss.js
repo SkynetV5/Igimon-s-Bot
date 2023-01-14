@@ -21,12 +21,13 @@ module.exports = {
             if(random_Number == 3){
                 message.reply(`${user} nie odwzajemnia twojego całusa ${message.author}`);
             }
-
+            console.log(`${new Date().toLocaleString()} - ${message.author}} używa komendy kiss na użytkowniku ${user}`)
         }
         else 
         {
             user = message.author;
             message.reply('how');
+            console.log(`${new Date().toLocaleString()} - ${message.author} używa komendy kiss na użytkowniku ${user}`)
         }
         
     }
