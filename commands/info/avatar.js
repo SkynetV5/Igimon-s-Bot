@@ -7,7 +7,16 @@ module.exports = {
     execute: async(message,args) => {
         let user = null;
         const mention = message.mentions.members.first();
-
+        let color = '#'
+        for (let i = 0 ; i < 6; i++){
+            let number = Math.floor(Math.random() * 16);
+            if (number < 10){
+                color += number
+            }
+            else{
+                color += String.fromCharCode(87+number)
+            }
+        }
         if(mention) 
         {
             user = mention.user;
@@ -18,7 +27,7 @@ module.exports = {
         }
         
         const embed = new Discord.EmbedBuilder()
-        .setColor('#16f5ea')
+        .setColor(color)
         .setAuthor({
             name: message.author.username,
             iconURL: message.author.avatarURL({dynamic: true})

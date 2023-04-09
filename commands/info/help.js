@@ -5,8 +5,18 @@ module.exports = {
     description: 'Wyswietla liste komend',
     usage: '!help',
     execute : (message,args) => {
+        let color = '#'
+        for (let i = 0 ; i < 6; i++){
+            let number = Math.floor(Math.random() * 16);
+            if (number < 10){
+                color += number
+            }
+            else{
+                color += String.fromCharCode(87+number)
+            }
+        }
         const embed = new Discord.EmbedBuilder()
-        .setColor('#34eba8')
+        .setColor(color)
         .setAuthor(({
             name: message.author.username,
             iconURL: message.author.avatarURL({dynamic: true})

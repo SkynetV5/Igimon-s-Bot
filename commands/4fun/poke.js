@@ -7,7 +7,7 @@ module.exports = {
     execute: async(message,args) => {
         let user = null;
         const mention = message.mentions.members.first();
-
+        
         if(mention) 
         {
             user = mention.user;
